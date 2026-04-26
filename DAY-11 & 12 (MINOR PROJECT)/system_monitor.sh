@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Log file location
-LOGFILE="/var/log/system_performance.log"
+LOGFILE="system_performance.log"
 INTERVAL=60  # Interval in seconds for generating reports (default: 60 seconds)
 
 # Function to log CPU usage
