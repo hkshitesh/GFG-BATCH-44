@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Log file location
-LOGFILE="/var/log/group_management.log"
+LOGFILE="group_management.log"
 
 # Function to add a group
 add_group() {
