@@ -9,3 +9,10 @@
   2. Downlaod and Install Jenkins
      https://www.jenkins.io/download/
   
+
+
+EKS Cluster Connection Commands
+
+  aws eks --region ap-south-1 describe-cluster --name gfgCluster --query cluster.status
+  
+  aws eks --region ap-south-1 update-kubeconfig --name gfgCluster
