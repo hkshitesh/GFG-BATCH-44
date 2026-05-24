@@ -1,0 +1,19 @@
+---
+- name: Install httpd and git on Amazon Linux
+  hosts: gfg
+  become: yes
+
+  tasks:
+
+    - name: Install httpd and git
+      yum:
+        name:
+          - httpd
+          - git
+        state: present
+
+    - name: Start and enable httpd
+      service:
+        name: httpd
+        state: started
+        enabled: yes
