@@ -1,0 +1,31 @@
+---
+- hosts: gfg
+  become: yes
+  vars:
+    operation: remove   # change to 'remove' to uninstall packages
+
+  tasks:
+
+    - name: Install htop
+      action: yum name=htop state=present
+      when: operation == "install"
+
+    - name: Install git
+      action: yum name=git state=present
+      when: operation == "install"
+
+    - name: Remove htop
+      action: yum name=htop state=absent
+      when: operation == "remove"
+
+    - name: Remove git
+      action: yum name=git state=absent
+      when: operation == "remove"
+
+    - name: Autoremove unused packages
+      command: yum autoremove -y
+      when: operation == "remove"
+
+    - name: Clean yum cache
+      command: yum clean all
+      when: operation == "remove"
