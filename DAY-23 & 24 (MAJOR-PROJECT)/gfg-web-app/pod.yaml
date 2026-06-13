@@ -1,0 +1,10 @@
+apiVersion: v1  
+kind: Pod               
+metadata:               
+  name: my-pod          
+  labels:               
+    app: my-app         
+spec: 
+  containers:           
+    - name: my-container 
+      image: 962804699607.dkr.ecr.us-east-1.amazonaws.com/gfg-major:latest 
